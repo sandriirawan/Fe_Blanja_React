@@ -1,0 +1,713 @@
+
+
+/* ============== Navbar=========== */
+#navbar .navbar {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 6px 40px 0px #adadad40;
+}
+
+#navbar .search {
+  width: 507px;
+  border-radius: 20px;
+  border-color: #9b9b9b;
+  margin-left: 60px;
+}
+
+#navbar .search::placeholder {
+  color: #9b9b9b;
+  padding-left: 10px;
+}
+
+#navbar .iconSearch {
+  margin-left: -30px;
+  color: #9b9b9b;
+}
+
+#navbar .filter {
+  font-size: 20px;
+  color: #9b9b9b;
+  margin-left: 20px;
+  margin-right: 60px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-color: #9b9b9b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+#navbar .cart {
+  font-size: 24px;
+  color: #9b9b9b;
+  margin: 0 20px;
+}
+#navbar .login {
+  width: 100px;
+  height: 36px;
+  color: white;
+  background-color: #db3022;
+  margin: 0 20px;
+  padding: 5px;
+}
+#navbar .login:hover {
+  color: white;
+  background-color: red;
+}
+
+#navbar .register {
+  width: 100px;
+  height: 36px;
+  color: #9b9b9b;
+  border: 1px solid;
+  border-color: #9b9b9b;
+  padding: 5px;
+}
+
+#navbar .register:hover {
+  color: white;
+  background-color: #9b9b9b;
+}
+
+@media screen and (max-width: 500px) {
+  #navbar .search {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  #navbar .iconSearch {
+    display: none;
+  }
+
+  #navbar .filter {
+    display: none;
+  }
+
+  #navbar .wrap {
+    margin-top: 10px;
+  }
+}
+/* ============== end Navbar =========== */
+
+/* ============== NavbarLogin =========== */
+#navbarLogin .navbar {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 6px 40px 0px #adadad40;
+}
+
+#navbarLogin .search {
+  width: 507px;
+  border-radius: 20px;
+  border-color: #9b9b9b;
+  margin-left: 60px;
+}
+
+#navbarLogin .search::placeholder {
+  color: #9b9b9b;
+  padding-left: 10px;
+}
+
+#navbarLogin .iconSearch {
+  margin-left: -30px;
+  color: #9b9b9b;
+}
+
+#navbarLogin .filter {
+  font-size: 20px;
+  color: #9b9b9b;
+  margin-left: 20px;
+  margin-right: 140px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-color: #9b9b9b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+#navbarLogin .cart {
+  font-size: 24px;
+  color: #9b9b9b;
+  margin: 0 20px;
+}
+
+#navbarLogin .bell {
+  font-size: 24px;
+  color: #9b9b9b;
+  margin: 0 20px;
+}
+
+#navbarLogin .massage {
+  font-size: 24px;
+  color: #9b9b9b;
+  margin: 0 20px;
+}
+
+#navbarLogin .profile {
+  font-size: 32px;
+  color: #9b9b9b;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  #navbarLogin .search {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  #navbarLogin .iconSearch {
+    display: none;
+  }
+
+  #navbarLogin .filter {
+    display: none;
+  }
+
+  #navbarLogin .wrap {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+/* ============== end NavbarLogin =========== */
+
+/* ==============  login ================== */
+#login .text-regis {
+  text-align: center;
+  padding-top: 1em;
+}
+#login .container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 450px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#login .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: rgba(219, 48, 34, 1);
+}
+#login .nav-link {
+  border: 1px solid;
+}
+
+#login .nav-link:not(.active) {
+  color: #999;
+}
+#login .nav-pills .nav-link {
+  width: 100px;
+}
+#login img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#login .btn {
+  color: white;
+  background-color: rgba(219, 48, 34, 1);
+}
+#login .btn:hover {
+  color: white;
+  background-color: rgb(255, 21, 0);
+}
+#login .link {
+  color: rgba(219, 48, 34, 1);
+}
+
+#login a {
+  color: rgba(219, 48, 34, 1);
+}
+#login a:hover {
+  color: rgb(255, 21, 0);
+}
+.login {
+  margin-top: 5px;
+}
+/* ============== end login ================== */
+
+/* ============== register ================== */
+#register .text-regis {
+  text-align: center;
+  padding-top: 1em;
+}
+#register .container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#register .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: rgba(219, 48, 34, 1);
+}
+
+#register .nav-link {
+  border: 1px solid;
+}
+
+#register .nav-link:not(.active) {
+  color: #999;
+}
+#register .nav-pills .nav-link {
+  width: 100px;
+}
+#register img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#register .btn {
+  color: white;
+  background-color: rgba(219, 48, 34, 1);
+}
+#register .btn:hover {
+  color: white;
+  background-color: rgb(255, 21, 0);
+}
+
+#register a {
+  color: rgba(219, 48, 34, 1);
+}
+#register a:hover {
+  color: rgb(255, 21, 0);
+}
+.register {
+  margin-top: 5px;
+}
+/* ============== end register =========== */
+
+/* ============== product detail =========== */
+
+#product .wrapRight {
+  margin-left: 40px;
+}
+
+#product .chat {
+  width: 160px;
+  border: 1px solid;
+}
+
+#product .chat:hover {
+  color: white;
+  background-color: #9b9b9b;
+}
+#product .bag {
+  width: 160px;
+  border: 1px solid;
+  margin: 0 10px;
+}
+
+#product .bag:hover {
+  color: white;
+  background-color: #9b9b9b;
+}
+#product .buy {
+  width: 343px;
+  color: white;
+  background-color: #db3022;
+}
+#product .buy:hover {
+  color: white;
+  background-color: red;
+}
+
+#product .wrapColor {
+  width: 550px;
+}
+#product .color {
+  border: 1px solid;
+  border-color: #b1afaf;
+  background-color: white;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 80px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+#product .wrapSize {
+  width: 550px;
+}
+#product .size {
+  border: 1px solid;
+  border-color: #b1afaf;
+  background-color: white;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 80px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#product .color.selected,
+#product .size.selected {
+  background-color: #b1afaf;
+}
+
+@media screen and (max-width: 500px) {
+  #product .wrapRight {
+    margin-left: 0;
+  }
+}
+
+/* ============== product detail =========== */
+
+/* ============== cart =========== */
+#cart .container {
+  margin-top: 120px;
+}
+#cart .cardKiri {
+  width: 720px;
+  height: 64px;
+  justify-content: center;
+}
+#cart .cardOrder {
+  width: 720px;
+  height: 126px;
+  justify-content: center;
+}
+#cart .wrapTitle {
+  width: 250px;
+}
+#cart .wrapInput {
+  padding-left: 50px;
+}
+
+#cart .btnMinus,
+#cart .btnPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+#cart .input {
+  margin: 0 5px;
+  text-align: center;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+
+#cart .cardKanan {
+  width: 370px;
+  height: 180px;
+}
+
+#cart .btnBuy {
+  width: 100%;
+  height: 36px;
+  border-radius: 25px;
+  color: white;
+  background-color: #db3022;
+}
+
+#cart .btnBuy:hover {
+  color: white;
+  background-color: red;
+}
+
+#cart input[type="checkbox"]:checked {
+  background-color: #db3022; 
+  border: #db3022;
+}
+
+@media screen and (max-width: 500px) {
+  #cart .container {
+    margin-top: 100px;
+  }
+  #cart .cardKiri {
+    width: 100%;
+  }
+  #cart .cardOrder {
+    width: 100%;
+  }
+  #cart .wrapTitle {
+    width: 100%;
+    font-size: 12px;
+  }
+  #cart .price {
+  
+    font-size: 12px;
+  }
+  
+  #cart .wrapInput {
+    padding-left: 20px;
+  }
+  #cart .btnMinus,
+  #cart .btnPlus {
+    width: 26px;
+    height: 26px;
+  }
+
+  #cart .input {
+    margin: 0;
+    width: 26px;
+    height: 26px;
+  }
+
+  #cart .wrapTitle {
+    width: 180px;
+  }
+  #cart .cardKanan {
+    width: 100%;
+    height: 180px;
+  }
+  #cart .btnBuy {
+    width: 100%;
+  }
+  #cart .wrap {
+    width: 130px;
+  }
+}
+/* ============== end cart =========== */
+/* ============== transaction =========== */
+#transaction .container {
+  margin-top: 120px;
+}
+#transaction .cardKiri {
+  width: 720px;
+  height: 190px;
+}
+#transaction .cardOrder {
+  width: 720px;
+  height: 126px;
+  justify-content: center;
+}
+#transaction .wrapTitle {
+  width: 250px;
+}
+
+
+#transaction .wrapInput {
+  padding-left: 50px;
+}
+
+#transaction .btnMinus,
+#transaction .btnPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+#transaction .input {
+  margin: 0 5px;
+  text-align: center;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+
+#transaction .cardKanan {
+  width: 370px;
+  height: 256px;
+}
+
+#transaction .line {
+  width: 100%;
+  border: 1px solid #9B9B9B; 
+}
+
+#transaction .btnBuy {
+  width: 100%;
+  height: 36px;
+  border-radius: 25px;
+  color: white;
+  background-color: #db3022;
+}
+
+#transaction .btnBuy:hover {
+  color: white;
+  background-color: red;
+}
+
+#transaction input[type="checkbox"]:checked {
+  background-color: #db3022; 
+  border: #db3022;
+}
+
+@media screen and (max-width: 500px) {
+  #transaction .container {
+    margin-top: 100px;
+  }
+  #transaction .cardKiri {
+    width: 100%;
+    height: auto;
+  }
+  #transaction .cardOrder {
+    width: 100%;
+  }
+  #transaction .wrapTitle {
+    width: 100%;
+    font-size: 12px;
+  }
+  #transaction .price {
+  
+    font-size: 12px;
+  }
+  
+  #transaction .wrapInput {
+    padding-left: 20px;
+  }
+  #transaction .btnMinus,
+  #transaction .btnPlus {
+    width: 26px;
+    height: 26px;
+  }
+
+  #transaction .input {
+    margin: 0;
+    width: 26px;
+    height: 26px;
+  }
+
+  #transaction .wrapTitle {
+    width: 180px;
+  }
+  #transaction .cardKanan {
+    width: 100%;
+    height: auto;
+  }
+  #transaction .btnBuy {
+    width: 100%;
+  }
+  #transaction .wrap {
+    width: 130px;
+  }
+}
+/* ============== end transaction =========== */
+
+/* ============== selling product =========== */
+
+#createProduct .wrapImage {
+  width: 760px;
+  height: 250px;
+
+}
+#createProduct .preview {
+  width: 190px;
+  height: 190px ;
+  background-color: #D4D4D4;
+  margin: 50px;
+  object-fit: cover;
+}
+
+#createProduct .preview img {
+  width: 190px;
+  height: 190px ;
+}
+
+#createProduct .btnUpload {
+  border: 1px solid;
+  border-color: #9b9b9b;
+  color: #9b9b9b;
+  background: none;
+  width: 160px;
+  height: 36px;
+  border-radius: 25px;
+}
+
+#createProduct .input {
+  width: 348px;
+  height: 48px;
+}
+
+#createProduct .description {
+  width: 760px;
+  height: 316px;
+}
+
+#createProduct .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #DB3022;
+  border-bottom: 4px solid #DB3022;
+  background-color: white;
+  
+}
+#createProduct .nav-link:not(.active) {
+  color: #999;
+}
+#createProduct .nav-pills .nav-link {
+  width: 131px;
+}
+
+
+
+/* ============== end selling product =========== */
+/* ============== my product =========== */
+#myProduct .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #DB3022;
+  border-bottom: 4px solid #DB3022;
+  background-color: white;
+  
+}
+#myProduct .nav-link:not(.active) {
+  color: #999;
+}
+#myProduct .nav-pills .nav-link {
+  width: 131px;
+}
+
+#myProduct .search::placeholder {
+  color: #D4D4D4;
+}
+
+#myProduct .pagination .page-item.active .page-link {
+  background-color: #DB3022;
+  border-color: #DB3022;
+  color: white;
+}
+
+
+#myProduct .pagination .page-link {
+  background-color: #F5F5F5;
+  border-color: #D4D4D4;
+  color: #333;
+}
+
+/* ============== end my product =========== */
+
+/* ============== modal address =========== */
+#address .address {
+  width: 210px;
+  border:1px solid #9B9B9B;
+  border-radius: 24px;
+  color: #9B9B9B;
+}
+
+#address .address:hover {
+  background-color: #9B9B9B;
+  color: white;
+}
+
+#address .addressNew {
+  width: 710px;
+  height: 86px;
+  border: 1px dotted #9B9B9B;
+}
+
+
+
+/* ============== end modal address=========== */
