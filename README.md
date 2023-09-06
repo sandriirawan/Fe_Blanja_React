@@ -7,7 +7,7 @@
   <p align="center">
     <a href=""><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://blanja-olshop.vercel.app/home">View Demo</a>
+    <a href="https://blanja-delta.vercel.app/home">View Demo</a>
   </p>
 </p>
 
@@ -173,4 +173,4 @@ Contributions are what make the open source community such an amazing place to b
 
 :rocket: [`Frontend E-Commerce Blanja Online Shop`](https://github.com/sandriirawan/Fe_Blanja_React)
 
-:rocket: [`Demo E-Commerce Blanja Online Shop`]()
+:rocket: [`Demo E-Commerce Blanja Online Shop`](https://blanja-delta.vercel.app/home)
