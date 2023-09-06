@@ -1,15 +1,17 @@
 <br />
 <p align="center">
 <div align="center">
-  <img height="150" <img src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/f815bc08-c956-4639-a3c3-0a54b331c320" alt="logo" border="0"/>
+  <img height="150" <img src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/b651c8f0-185c-4184-bda7-83f195228c84" alt="logo" border="0"/>
 </div>
   <h3 align="center">Blanja Olshop</h3>
   <p align="center">
     <a href=""><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://blanja-olshop.vercel.app/home">View Demo</a>
+    <a href="https://blanja-delta.vercel.app/home">View Demo</a>
   </p>
 </p>
+
+
 
 
 <!-- TABLE OF CONTENTS -->
@@ -88,12 +90,13 @@ REACT_APP_BACKEND = [BACKEND_URL]
 <!-- ROADMAP -->
 
 
+
 ## Screenshots
 
 <table>
  <tr>
-    <td><img width="350px" src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/c0a9f4b2-9810-465c-abfd-6d60630406a5" border="0" alt="1" /></td>
-    <td> <img width="350px" src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/9d8cc955-6d3a-40ac-9f30-a62a2fa9547d"  border="0"  alt="2" /></td>
+    <td><img width="350px" src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/f200a7b9-264b-49df-85e7-f4b9c4755842" border="0" alt="1" /></td>
+    <td> <img width="350px" src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/278427ab-7a4a-4501-8a5b-2dc6db37113d"  border="0"  alt="2" /></td>
   </tr>
    <tr>
     <td>Login Customer</td>
@@ -101,49 +104,49 @@ REACT_APP_BACKEND = [BACKEND_URL]
   </tr>
 
   <tr>
-    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/8d3bcbb8-0228-483c-9004-6492947c4ce3" border="0" alt="3" /> </td>
-     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/327b653e-8c7b-463e-a275-0b772e19e115"  border="0" alt="4" /></td>
+    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/61e09bb4-1fc9-47ac-9e35-dfbb6e5858ba" border="0" alt="3" /> </td>
+     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/d1e44a55-7b23-450e-a2d2-7952b3734427"  border="0" alt="4" /></td>
   </tr>
    <tr>
      <td>Register Customer</td>
     <td>Register Seller</td>
   </tr>
   <tr>
-    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/110fbc64-ff0f-4988-bc53-b50f03a9e9a4" border="0" alt="3" /> </td>
-     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/97f97ffd-f5ae-4d6f-b9fa-4ed75654bf70"  border="0" alt="4" /></td>
+    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/fdd9fde8-f9dd-4d81-9896-c14bb8ad6528" border="0" alt="3" /> </td>
+     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/f0dbf92a-7c54-4917-a5a6-c1d81af52505"  border="0" alt="4" /></td>
   </tr>
    <tr>
     <td>Landing Page</td>
      <td>New Product</td>
   </tr>
-  
+
   <tr>
-    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/c9e4104e-414e-4166-8ae8-0ef067bba265" border="0" alt="3" /> </td>
-     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/b58583f7-40c4-4d64-bf22-abb3aa23f660"  border="0" alt="4" /></td>
+    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/5d89eebe-4eb3-4e0a-ae58-7a0ce8520404" border="0" alt="3" /> </td>
+     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/3efdfdbb-ce56-430b-ac72-d7df1777839d"  border="0" alt="4" /></td>
   </tr>
    <tr>
     <td>Detail Product</td>
      <td>My Bag</td>
   </tr>
   <tr>
-    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/221c4981-f234-4b9f-a6e3-216177987e98" border="0" alt="3" /> </td>
-     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/d7926a15-98fb-4a1f-9014-8c9a92aee249"  border="0" alt="4" /></td>
+    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/4f3222c9-03ee-421b-b3eb-b4a13ae64ddb" border="0" alt="3" /> </td>
+     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/b9af572b-b559-4c2e-a10a-770caef1e420"  border="0" alt="4" /></td>
   </tr>
    <tr>
      <td>Checkout</td>
     <td>My Order</td>
   </tr>
     <tr>
-    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/e9af9265-6d8e-44f4-a609-5906c2da1a77" border="0" alt="3" /> </td>
-     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/dff975d3-dc16-4af6-bd11-26f355380658"  border="0" alt="4" /></td>
+    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/d9645191-3645-4a4d-b1bf-218ae9a7199a" border="0" alt="3" /> </td>
+     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/b2f38b11-1a27-4dc1-a518-a1ee07a47dcb"  border="0" alt="4" /></td>
   </tr>
    <tr>
      <td>Edit Seller Profile</td>
     <td>Order Completed</td>
   </tr>
     <tr>
-    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/f624cb55-3746-454e-a662-e2f996d8c3c3" border="0" alt="3" /> </td>
-     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/fc5b0f19-c019-4e91-aa4b-2fd79e628015"  border="0" alt="4" /></td>
+    <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/cea225f3-f29c-4d9c-93e5-ee952cb71ec8" border="0" alt="3" /> </td>
+     <td><img width="350px"  src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/2fb4d7a7-84a3-427c-998e-0e4509ed637c"  border="0" alt="4" /></td>
   </tr>
    <tr>
      <td>My Product</td>
@@ -170,4 +173,4 @@ Contributions are what make the open source community such an amazing place to b
 
 :rocket: [`Frontend E-Commerce Blanja Online Shop`](https://github.com/sandriirawan/Fe_Blanja_React)
 
-:rocket: [`Demo E-Commerce Blanja Online Shop`]()
+:rocket: [`Demo E-Commerce Blanja Online Shop`](https://blanja-delta.vercel.app/home)
