@@ -30,7 +30,7 @@ function ModalPayment({ delivery, totalCartPrice, totalSummaryPrice,handleUpdate
         total_payment: totalPayment,
       };
       const response = await axios.post(
-        "${process.env.REACT_APP_API_KEY}/payment",
+        `${process.env.REACT_APP_API_KEY}/payment`,
         paymentData
       );
       Swal.fire({

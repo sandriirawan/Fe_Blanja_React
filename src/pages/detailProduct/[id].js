@@ -3,8 +3,8 @@ import NavbarLogin from "../../components/navbarLogin";
 import PopularCard from "../../components/popularCard";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 
