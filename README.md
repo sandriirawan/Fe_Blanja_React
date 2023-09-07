@@ -1,16 +1,15 @@
 <br />
 <p align="center">
 <div align="center">
-  <img height="150" <img src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/b651c8f0-185c-4184-bda7-83f195228c84" alt="logo" border="0"/>
+  <img height="150" <img src="https://github.com/sandriirawan/Fe_Blanja_React/assets/80002249/5fd2db78-c17a-4aba-bbc6-77ef3a475c26" alt="logo" border="0"/>
 </div>
-  <h3 align="center">Blanja Olshop</h3>
+  <h3 align="center">Blanja</h3>
   <p align="center">
-    <a href=""><strong>Explore the docs »</strong></a>
+    <a href="https://blanja-delta.vercel.app/home"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://blanja-delta.vercel.app/home">View Demo</a>
   </p>
 </p>
-
 
 
 
