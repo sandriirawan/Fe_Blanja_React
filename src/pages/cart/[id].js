@@ -94,9 +94,9 @@ function Cart() {
                       ({selectedItems.length} items selected)
                     </span>
                   </div>
-                  <div className="text-danger font-weight-bold mr-3">
-                  <span onClick={handleDelete}>Delete</span>
-                  </div>
+  
+                  <button className="text-danger font-weight-bold mr-3 bg-white border-0" onClick={handleDelete}>Delete</button>
+      
                 </div>
               </div>
               {orders.map((item) => (
@@ -116,7 +116,7 @@ function Cart() {
                     />
                     <div className="ml-5 wrapImage">
                       <img
-                        style={{ width: 70, height: 70 }}
+                        style={{ width: 70, height: 70,objectFit:"cover" }}
                         src={item.photo_product}
                         alt="Gambar 1"
                       />

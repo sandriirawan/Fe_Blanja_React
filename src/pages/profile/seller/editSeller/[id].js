@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SidebarSeller from "../../../../components/sidebarSeller";
 import NavbarLogin from "../../../../components/navbarLogin";
-import Swal from 'sweetalert2';
 
 
 function EditSeller() {

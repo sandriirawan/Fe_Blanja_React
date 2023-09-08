@@ -3,28 +3,31 @@ import NavbarLogin from "../../components/navbarLogin";
 import PopularCard from "../../components/popularCard";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-  import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
+import Skeleton from "react-loading-skeleton";
 
 function DetailProduct() {
   const { id } = useParams();
   const usersId = localStorage.getItem("usersId");
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_KEY}/product/${id}`)
       .then((response) => {
         setProduct(response.data.data[0]);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
+        setLoading(false);
       });
   }, [id]);
 
-  console.log()
+  console.log();
   const colors = product.color ? product.color.split(",") : [];
   const sizes = product.size ? product.size.split(",") : [];
 
@@ -45,7 +48,7 @@ function DetailProduct() {
     order_size: "",
     order_color: "",
     quantity: "",
-    seller_id:"",
+    seller_id: "",
     custommer_id: usersId,
     product_id: id,
   });
@@ -57,7 +60,7 @@ function DetailProduct() {
     });
   };
 
-  const handleSubmit = async (event,addToBag = true) => {
+  const handleaddBag = async (event, addToBag = true) => {
     try {
       const updatedData = {
         ...data,
@@ -71,9 +74,29 @@ function DetailProduct() {
         `${process.env.REACT_APP_API_KEY}/orders`,
         updatedData
       );
-      if (addToBag) {
-        toast.success('Item added to bag successfully');
-      }
+
+      toast.success("Item added to bag successfully");
+
+      console.log("order created successfully", response);
+    } catch (error) {
+      console.log("Error creating order:", error);
+    }
+  };
+
+  const handleBuy = async (event, addToBag = true) => {
+    try {
+      const updatedData = {
+        ...data,
+        order_color: selectedColor,
+        order_size: selectedSize,
+        quantity: quantity,
+        seller_id: product.users_id,
+      };
+
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_KEY}/orders`,
+        updatedData
+      );
       console.log("order created successfully", response);
     } catch (error) {
       console.log("Error creating order:", error);
@@ -81,71 +104,130 @@ function DetailProduct() {
   };
 
   return (
-    <>  
-     <ToastContainer />
+    <>
+      <ToastContainer />
       <NavbarLogin />
       <main id="product">
         <div className="container" style={{ marginTop: 120 }}>
           <div className="row">
-            <div className="col-md-4 ">
-              <img
-                style={{ width: 367, height: 378 }}
-                src={product.photo_product}
-                alt="Gambar 1"
-              />
+            <div className="col-md-3 ">
+              {loading ? (
+                <Skeleton width={367} height={378} />
+              ) : (
+                <img
+                  style={{ width: 367, height: 378,objectFit:"cover" }}
+                  src={product.photo_product}
+                  alt="Gambar 1"
+                />
+              )}
             </div>
-            <div className="col-md-6 wrapRight">
-              <h4>{product.product_name}</h4>
-              <h6 style={{ color: "#9B9B9B" }}>{product.store_name}</h6>
-              <img
-                src={require("../../assets/Rating 5 stars.png")}
-                alt="Gambar 1"
-              />
-              <div style={{ marginTop: 20 }}>
-                <h6>price</h6>
-                <h5 style={{ fontWeight: "bold" }}>
-                  {new Intl.NumberFormat("id-ID", {
-                    style: "currency",
-                    currency: "IDR",
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 0,
-                  }).format(product.price)}
-                </h5>
-              </div>
-              <div style={{ marginTop: 20, width: 20 }}>
-                <h6>Color</h6>
-                <div className="wrapColor">
-                  {colors.map((color) => (
-                    <button
-                      key={color}
-                      className={`color ${
-                        selectedColor === color ? "selected" : ""
-                      }`}
-                      onClick={() => setSelectedColor(color)}
-                    >
-                      {color}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div style={{ marginTop: 10, width: 20 }}>
-                <h6>Size</h6>
-                <div className="wrapSize">
-                  {sizes.map((size) => (
-                    <button
-                      key={size}
-                      className={`size ${
-                        selectedSize === size ? "selected" : ""
-                      }`}
-                      onClick={() => setSelectedSize(size)}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </div>
-              </div>
+            <div className="col-md-8 wrapRight">
+              {loading ? (
+                <>
+                  <Skeleton width={200} height={30} />
+                  <div style={{ marginTop: 25 }}>
+                    <Skeleton width={100} height={20} />
+                    <Skeleton width={100} height={20} />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h4>{product.product_name}</h4>
+                  <h6 style={{ color: "#9B9B9B" }}>{product.store_name}</h6>
+                  <img
+                    src={require("../../assets/Rating 5 stars.png")}
+                    alt="Gambar 1"
+                  />
+                </>
+              )}
+              {loading ? (
+                <>
+                  <div style={{ marginTop: 25 }}>
+                    <Skeleton width={100} height={20} />
+                    <Skeleton width={100} height={20} />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{ marginTop: 20 }}>
+                    <h6>price</h6>
+                    <h5 style={{ fontWeight: "bold" }}>
+                      {new Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 0,
+                      }).format(product.price)}
+                    </h5>
+                  </div>
+                </>
+              )}
+              {loading ? (
+                <>
+                  <div style={{ marginTop: 20, width: 20 }}>
+                    <Skeleton width={100} height={20} />
+                    <Skeleton width={300} height={20} />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{ marginTop: 20, width: 20 }}>
+                    <h6>Color</h6>
+                    <div className="wrapColor">
+                      {colors.map((color) => (
+                        <button
+                          key={color}
+                          className={`color ${
+                            selectedColor === color ? "selected" : ""
+                          }`}
+                          onClick={() => setSelectedColor(color)}
+                        >
+                          {color}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+              {loading ? (
+                <>
+                  <div style={{ marginTop: 20, width: 20 }}>
+                    <Skeleton width={100} height={20} />
+                    <Skeleton width={300} height={20} />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{ marginTop: 10, width: 20 }}>
+                    <h6>Size</h6>
+                    <div className="wrapSize">
+                      {sizes.map((size) => (
+                        <button
+                          key={size}
+                          className={`size ${
+                            selectedSize === size ? "selected" : ""
+                          }`}
+                          onClick={() => setSelectedSize(size)}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
               <div className="d-flex" style={{ marginTop: 20 }}>
-                <h6 style={{}}>Jumlah</h6>
+                {loading ? (
+                  <>
+                    <div style={{ marginBottom: 10 }}>
+                      <Skeleton width={60} height={20} />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <h6>Jumlah</h6>
+                  </>
+                )}
               </div>
               <div className="d-flex">
                 <div className="input-group">
@@ -156,17 +238,25 @@ function DetailProduct() {
                     -
                   </button>
                   <div style={{ display: "flex", alignItems: "center" }}>
-                    <input
-                      type="text"
-                      value={quantity}
-                      readOnly
-                      style={{
-                        width: 50,
-                        margin: "0 5px",
-                        textAlign: "center",
-                        border: "none",
-                      }}
-                    />
+                    {loading ? (
+                      <>
+                        <Skeleton width={60} height={20} />
+                      </>
+                    ) : (
+                      <>
+                        <input
+                          type="text"
+                          value={quantity}
+                          readOnly
+                          style={{
+                            width: 50,
+                            margin: "0 5px",
+                            textAlign: "center",
+                            border: "none",
+                          }}
+                        />
+                      </>
+                    )}
                   </div>
                   <button
                     className="btn btn-outline-secondary"
@@ -183,7 +273,7 @@ function DetailProduct() {
                 <button
                   type="button"
                   className="btn rounded-pill bag"
-                  onClick={(e) => handleSubmit(e, true)}
+                  onClick={handleaddBag}
                   disabled={!selectedSize || !selectedColor || quantity === 0}
                 >
                   <h6 className="login">Add bag</h6>
@@ -195,7 +285,7 @@ function DetailProduct() {
                   <button
                     type="button"
                     className="btn rounded-pill buy"
-                    onClick={handleSubmit}
+                    onClick={handleBuy}
                     disabled={!selectedSize || !selectedColor || quantity === 0}
                   >
                     <h6 className="login">Buy Now</h6>
@@ -205,12 +295,26 @@ function DetailProduct() {
             </div>
             <h4 style={{ marginTop: 60 }}>Informasi Produk</h4>
             <h6 style={{ marginTop: 30 }}>Condition </h6>
-            <h6 style={{ color: "#DB3022" }}>{product.condition}</h6>
-            <h6 style={{ marginTop: 30 }}>Condition</h6>
-            <p style={{ textAlign: "justify" }}>{product.description}</p>
-            <PopularCard />
+            {loading ? (
+              <>
+                <Skeleton width={50} height={20} />
+              </>
+            ) : (
+              <h6 style={{ color: "#DB3022" }}>{product.condition}</h6>
+            )}
+            <h6 style={{ marginTop: 30 }}>Description</h6>
+            {loading ? (
+              <>
+                <Skeleton style={{ width: "100%" }} height={150} />
+              </>
+            ) : (
+              <>
+                <p style={{ textAlign: "justify" }}>{product.description}</p>
+              </>
+            )}
           </div>
         </div>
+            <PopularCard />
       </main>
     </>
   );

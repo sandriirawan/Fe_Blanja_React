@@ -137,7 +137,7 @@ function Transaction() {
                     />
                     <div className="ml-5 wrapImage">
                       <img
-                        style={{ width: 70, height: 70 }}
+                        style={{ width: 70, height: 70,objectFit:"cover"  }}
                         src={item.photo_product}
                         alt="Gambar 1"
                       />

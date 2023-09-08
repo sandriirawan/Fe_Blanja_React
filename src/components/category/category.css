@@ -1,0 +1,24 @@
+.row{
+    justify-content: space-between;
+}
+.img{
+    width: 206px;
+    height: 220;
+}
+.row .colom{
+    width: 206px;
+}
+
+@media screen and (max-width: 499px) {
+    .row{
+      justify-content: unset;
+    }
+    .row .colom{
+        width: 50%;
+    }
+    .img {
+        width: 50%; /* Mengatur lebar gambar agar 2 gambar berjajar */
+        max-width: 100%; /* Maksimum lebar gambar adalah 100% dari container */
+        height: auto; /* Biarkan tinggi gambar disesuaikan secara otomatis */
+      }
+  }

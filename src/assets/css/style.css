@@ -70,7 +70,7 @@
   background-color: #9b9b9b;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
   #navbar .search {
     padding-left: 0;
     margin-left: 0;
@@ -154,7 +154,7 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
   #navbarLogin .search {
     padding-left: 0;
     margin-left: 0;

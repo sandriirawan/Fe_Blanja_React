@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function PopularCard() {
   const navigate = useNavigate();
@@ -38,14 +40,30 @@ function PopularCard() {
       </div>
 
       {loading ? (
-        <h1>loading</h1>
+              <div className="row">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <div
+                  className="col-md-3 col-sm-6 mb-4"
+                  key={index}
+                >
+                  <div className="border rounded product"  style={{ height: 340 }}>
+                    <Skeleton height={136} />
+                    <div className="p-2">
+                      <Skeleton width={184} height={48} />
+                      <Skeleton width={100} height={20} />
+                      <Skeleton width={120} height={16} />
+                      <Skeleton width={100} height={16} />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
       ) : (
         <div className="row">
           {products.map((item) => (
             <div
-              className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
+              className="col-md-3 col-sm-6 mb-4"
               key={item.id}
-              style={{ width: 222 }}
             >
               <div
                 className="border rounded product"

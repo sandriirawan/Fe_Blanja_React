@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavbarLogin from "../../../../components/navbarLogin";
 import SidebarCustommer from "../../../../components/sidebarCustommer";
-import Swal from "sweetalert2";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
