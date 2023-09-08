@@ -1,9 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import "./card.css";
 
 function Card() {
   const navigate = useNavigate();
@@ -42,10 +41,12 @@ function Card() {
         <div className="row">
           {Array.from({ length: 5 }).map((_, index) => (
             <div
-              className="col-md-3 col-sm-6 mb-4"
+              className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
               key={index}
+              style={{ width: 222 }}
             >
               <div className="border rounded product"  style={{ height: 340 }}>
+
                 <Skeleton height={136} />
                 <div className="p-2">
                   <Skeleton width={184} height={48} />
@@ -61,8 +62,9 @@ function Card() {
         <div className="row">
           {products.map((item) => (
             <div
-              className="wrap col-md-3 col-sm-6 mb-4"
+              className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
               key={item.id}
+              style={{ width: 222 }}
             >
               <div
                 className="border rounded product"
