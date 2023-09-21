@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -11,7 +11,7 @@ function PopularCard() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_KEY}/product`)
+      .get(`${process.env.REACT_APP_API_KEY}/product?sort=DESC`)
       .then((response) => {
         setProducts(response.data.data);
         setLoading(false);
