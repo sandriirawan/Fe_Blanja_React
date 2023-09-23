@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/icon.png";
 import axios from "axios";
-import Swal from 'sweetalert2';
-import 'sweetalert2/dist/sweetalert2.css';
-
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.css";
 
 function Register() {
+  const navigate = useNavigate()
   let [custommerData, setCustommerData] = useState({
     name: "",
     email: "",
@@ -17,7 +17,7 @@ function Register() {
     email: "",
     password: "",
     phone: "",
-    store_name:"",
+    store_name: "",
   });
 
   let onChangeCustommer = (e) => {
@@ -35,6 +35,21 @@ function Register() {
   };
 
   const handleSellerRegister = async () => {
+    if (
+      !sellerData.name ||
+      !sellerData.email ||
+      !sellerData.password ||
+      !sellerData.phone ||
+      !sellerData.store_name
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Validation Error",
+        text: "Please fill in all required fields.",
+      });
+      return;
+    }
+
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_KEY}/seller/register`,
@@ -42,21 +57,31 @@ function Register() {
       );
       console.log("register successful:", response.data);
       Swal.fire({
-        icon: 'success',
-        title: 'Registration Successful',
-        text: 'You have successfully registered as a seller.',
+        icon: "success",
+        title: "Registration Successful",
+        text: "You have successfully registered as a seller.",
       });
+      navigate("/login");
     } catch (error) {
       console.error("register error:", error);
       Swal.fire({
-        icon: 'error',
-        title: 'Registration Error',
-        text: 'An error occurred during registration. Please try again later.',
+        icon: "error",
+        title: "Registration Error",
+        text: "An error occurred during registration. Please try again later.",
       });
     }
   };
 
   const handleCustommerRegister = async () => {
+    if (!custommerData.name || !custommerData.email || !custommerData.password) {
+      Swal.fire({
+        icon: "error",
+        title: "Validation Error",
+        text: "Please fill in all required fields.",
+      });
+      return;
+    }
+
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_KEY}/custommer/register`,
@@ -64,16 +89,17 @@ function Register() {
       );
       console.log("register successful:", response.data);
       Swal.fire({
-        icon: 'success',
-        title: 'Registration Successful',
-        text: 'You have successfully registered as a custommer.',
+        icon: "success",
+        title: "Registration Successful",
+        text: "You have successfully registered as a custommer.",
       });
+      navigate("/login");
     } catch (error) {
       console.error("register error:", error);
       Swal.fire({
-        icon: 'error',
-        title: 'Registration Error',
-        text: 'An error occurred during registration. Please try again later.',
+        icon: "error",
+        title: "Registration Error",
+        text: "An error occurred during registration. Please try again later.",
       });
     }
   };
@@ -159,7 +185,11 @@ function Register() {
                 />
               </div>
               <div className="form-group">
-                <button type="button" className="btn btn-block rounded-pill" onClick={handleCustommerRegister}>
+                <button
+                  type="button"
+                  className="btn btn-block rounded-pill"
+                  onClick={handleCustommerRegister}
+                >
                   <h6 className="register">SIGN UP</h6>
                 </button>
               </div>
@@ -230,7 +260,11 @@ function Register() {
                 />
               </div>
               <div className="form-group">
-                <button type="button" className="btn btn-block rounded-pill" onAuxClick={handleSellerRegister}>
+                <button
+                  type="button"
+                  className="btn btn-block rounded-pill"
+                  onClick={handleSellerRegister}
+                >
                   <h6 className="register">SIGN UP</h6>
                 </button>
               </div>

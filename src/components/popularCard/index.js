@@ -61,54 +61,53 @@ function PopularCard() {
         </div>
       ) : (
         <div className="row">
-          {products.map((item) => (
+        {products.map((item) => (
+          <div
+            className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4 cardWrap"
+            key={item.id}
+            // style={{ width: 222 }}
+          >
             <div
-              className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
-              key={item.id}
-              style={{ width: 222 }}
+              className="border rounded product"
+              // style={{ height: 340 }}
+              onClick={() => handleProductClick(item.id)}
             >
-              <div
-                className="border rounded product"
-                style={{ height: 340 }}
-                onClick={() => handleProductClick(item.id)}
-              >
+              <img
+                className="img-fluid"
+                src={item.photo_product}
+                crossOrigin="anonymous"
+                alt="cloth"
+                style={{
+                  width: "100%",
+                  maxHeight: "136px",
+                  objectFit: "cover",
+                }}
+              />
+              <div className="p-2">
+                <h5
+                  className="card-title mt-2" 
+                  style={{ height: 70 }}
+                >
+                  {item.product_name}
+                </h5>
+                <h5 className="text-danger mt-2">
+                  {new Intl.NumberFormat("id-ID", {
+                    style: "currency",
+                    currency: "IDR",
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  }).format(item.price)}
+                </h5>
+                <p style={{ color: "#9B9B9B" }}>{item.store_name}</p>
                 <img
-                  className=" img-fluid"
-                  src={item.photo_product}
-                  crossOrigin="anonymous"
-                  alt="cloth"
-                  style={{
-                    width: "100%",
-                    maxHeight: "136px",
-                    objectFit: "cover",
-                  }}
+                  src={require("../../assets/Rating 5 stars.png")}
+                  alt="stars"
                 />
-                <div className="p-2">
-                  <h5
-                    className="card-title mt-2"
-                    style={{ width: 184, height: 48 }}
-                  >
-                    {item.product_name}
-                  </h5>
-                  <h5 className="text-danger mt-2">
-                    {" "}
-                    {new Intl.NumberFormat("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
-                      minimumFractionDigits: 0,
-                      maximumFractionDigits: 0,
-                    }).format(item.price)}
-                  </h5>
-                  <p style={{ color: "#9B9B9B" }}>{item.store_name}</p>
-                  <img
-                    src={require("../../assets/Rating 5 stars.png")}
-                    alt="stars"
-                  />
-                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       )}
     </div>
   );

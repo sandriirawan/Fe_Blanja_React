@@ -1,0 +1,15 @@
+.product{
+    height:340px ;
+}
+.cardWrap{
+    width:222px ;
+}
+
+@media (max-width: 767px) {
+    .product{
+        height:100%  ;
+    }
+    .cardWrap{
+        width:100% ;
+    }
+  }

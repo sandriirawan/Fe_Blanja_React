@@ -94,7 +94,7 @@ const CategoryComponent = () => {
                     className="colom col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
                     key={item.id}
                   >
-                    <div className="border rounded product">
+                    <div className="border rounded ">
                       <img
                         className="img"
                         src={item.category_photo}

@@ -111,10 +111,10 @@ function Login() {
             <form>
               <div className="form-group">
                 <input
-                  name="email"
                   className="form-control"
                   placeholder="Email"
                   type="email"
+                  name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
