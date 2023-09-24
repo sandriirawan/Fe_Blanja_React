@@ -5,6 +5,7 @@ import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./category.css";
+import { Link } from "react-router-dom";
 
 const CategoryComponent = () => {
   const [dataCategory, setDataCategory] = useState([]);
@@ -54,37 +55,39 @@ const CategoryComponent = () => {
         </div>
       ) : (
         <Carousel
-          nextIcon={
-            <FaArrowRight
-              style={{
-                width: 42,
-                height: 42,
-                borderRadius: "50%",
-                backgroundColor: "white",
-                color: "#9B9B9B",
-                position: "absolute",
-                top: "50%",
-                right: -20,
-                transform: "translateY(-50%)",
-              }}
-            />
-          }
-          prevIcon={
-            <FaArrowLeft
-              style={{
-                width: 42,
-                height: 42,
-                borderRadius: "50%",
-                backgroundColor: "white",
-                color: "#9B9B9B",
-                position: "absolute",
-                top: "50%",
-                left: -20,
-                transform: "translateY(-50%)",
-              }}
-            />
-          }
-          indicators={false}
+          // nextIcon={
+          //   <FaArrowRight
+          //     style={{
+          //       width: 42,
+          //       height: 42,
+          //       borderRadius: "50%",
+          //       backgroundColor: "white",
+          //       color: "#9B9B9B",
+          //       position: "absolute",
+          //       top: "50%",
+          //       right: -20,
+          //       transform: "translateY(-50%)",
+          //     }}
+          //   />
+          // }
+          // prevIcon={
+          //   <FaArrowLeft
+          //     style={{
+          //       width: 42,
+          //       height: 42,
+          //       borderRadius: "50%",
+          //       backgroundColor: "white",
+          //       color: "#9B9B9B",
+          //       position: "absolute",
+          //       top: "50%",
+          //       left: -20,
+          //       transform: "translateY(-50%)",
+          //     }}
+          //   />
+          // }
+          controls={false}
+          interval={3000}
+          // indicators={false}
         >
           {groupedData.map((group, groupIndex) => (
             <Carousel.Item key={groupIndex}>
@@ -94,6 +97,7 @@ const CategoryComponent = () => {
                     className="colom col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
                     key={item.id}
                   >
+                    <Link to={`/category/${item.id}`}>
                     <div className="border rounded ">
                       <img
                         className="img"
@@ -102,6 +106,7 @@ const CategoryComponent = () => {
                         alt="cloth"
                       />
                     </div>
+                    </Link>
                   </div>
                 ))}
               </div>

@@ -18,6 +18,8 @@ import Transaction from '../../pages/cart/transaction/[id]';
 import Customer from '../../pages/profile/custommer/[id]';
 import MyOrderCustommer from '../../pages/profile/custommer/myOrder/[id]';
 import ShippingAddress from '../../pages/profile/custommer/shippingAddress/[id]';
+import NewProduct from '../../pages/NewProduct';
+import CategoryProduct from '../../pages/Category';
 
 
 
@@ -34,6 +36,8 @@ const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product/:id" element={<DetailProduct />} />
+          <Route path="/category/:id" element={<CategoryProduct />} />
+          <Route path="/newproduct/" element={<NewProduct />} />
           <Route path="/cart/:id" element={<Cart />} />
           <Route path="/transaction/:id" element={<Transaction />} />
           <Route path="/profile/:id" element={<Profile />} />
