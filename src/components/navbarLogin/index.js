@@ -3,32 +3,30 @@ import logo from "../../assets/icon.png";
 import "../../assets/css/style.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import SearchResult from "../searchResult";
 
 const NavbarLogin = () => {
   const usersId = localStorage.getItem("usersId");
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     if (search.trim() === "") {
-      // Clear the results if the search input is empty
+   
       setData([]);
       return;
     }
-
-    // Show loading while fetching data
     setLoading(true);
-
     axios
       .get(`${process.env.REACT_APP_API_KEY}/product/search-product?search=${search}`)
       .then((response) => {
         setData(response.data.data);
-        setLoading(false); // Hide loading when data is fetched
+        setLoading(false); 
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        setLoading(false); // Hide loading in case of an error
+        setLoading(false); 
       });
   }, [search]);
 
@@ -53,6 +51,7 @@ const NavbarLogin = () => {
               <span className="navbar-toggler-icon col-md-4" />
             </button>
             <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
+              <div>
               <ul className="navbar-nav search-container">
                 <li className="nav-item">
                   <input
@@ -64,6 +63,8 @@ const NavbarLogin = () => {
                   />
                 </li>
               </ul>
+              <SearchResult  data={data} />
+              </div>
               <i className="bi bi-search iconSearch" />
               <i className="filter bi bi-funnel" />
               <form className="wrap">
@@ -84,22 +85,6 @@ const NavbarLogin = () => {
           </div>
         </nav>
       </header>
-      {/* {loading ? (
-        <div className="container mt-5">Loading...</div>
-      ) : (
-        <div className="container mt-5">
-          {data.length === 0 ? (
-            <p>No results found.</p>
-          ) : (
-            <ul>
-              {data.map((item) => (
-                <li key={item.id}>{item.product_name}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )} */}
-      {/* end navbar */}
     </>
   );
 };

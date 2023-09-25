@@ -1,0 +1,32 @@
+.search-results{
+    position: absolute;
+    background-color: white;
+    width: 507px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.result{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.result:hover{
+background-color: #efefef;
+}
+.image{
+    width: 50px;
+    height: 50px;
+}
+.name{
+    margin: 5px;
+}
+
+@media screen and (max-width: 499px) {
+    .search-results{
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+  }
