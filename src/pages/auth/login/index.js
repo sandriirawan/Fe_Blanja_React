@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../../../assets/icon.png";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.css";
 
 
 function Login() {
@@ -33,7 +34,21 @@ function Login() {
       navigate("/home");
       console.log("Login successful:", response.data);
     } catch (error) {
-      console.error("Login error:", error);
+      if (error.response) {
+        Swal.fire({
+          icon: "error",
+          title: "Login Error",
+          text: error.response.data.message, 
+        });
+        console.error("Login error:", error.response.data);
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Login Error",
+          text: "An error occurred while processing your request. Please try again later.",
+        });
+        console.error("Login error:", error);
+      }
     }
   };
 
@@ -56,7 +71,21 @@ function Login() {
       navigate("/home");
       console.log("Login successful:", response.data);
     } catch (error) {
-      console.error("Login error:", error);
+      if (error.response) {
+        Swal.fire({
+          icon: "error",
+          title: "Login Error",
+          text: error.response.data.message, 
+        });
+        console.error("Login error:", error.response.data);
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Login Error",
+          text: "An error occurred while processing your request. Please try again later.",
+        });
+        console.error("Login error:", error);
+      }
     }
   };
   return (
